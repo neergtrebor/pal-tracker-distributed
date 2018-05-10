@@ -164,17 +164,17 @@ jobs:
   - get: timesheets-artifacts
     trigger: false
   - task: migrate timesheets database
-      file: pal-tracker/ci/migrateDatabase.yml
-      params:
-        CF_API_URL: {{cf-api-url}}
-        CF_USERNAME: {{cf-username}}
-        CF_PASSWORD: {{cf-password}}
-        CF_ORG: {{cf-org}}
-        CF_SPACE: sandbox
-        MYSQL_IP: {{mysql-ip}}
-        DATABASE_NAME: {{tracker-timesheets-database}}
-        DATABASE_USERNAME: {{tracker-timesheets-database-username}}
-        DATABASE_PASSWORD: {{tracker-timesheets-database-password}}
+    file: pal-tracker/ci/migrateDatabase.yml
+    params:
+      CF_API_URL: {{cf-api-url}}
+      CF_USERNAME: {{cf-username}}
+      CF_PASSWORD: {{cf-password}}
+      CF_ORG: {{cf-org}}
+      CF_SPACE: sandbox
+      MYSQL_IP: {{mysql-ip}}
+      DATABASE_NAME: {{tracker-timesheets-database}}
+      DATABASE_USERNAME: {{tracker-timesheets-database-username}}
+      DATABASE_PASSWORD: {{tracker-timesheets-database-password}}
   - put: cf
     params:
       manifest: pal-tracker/manifest-timesheets.yml
