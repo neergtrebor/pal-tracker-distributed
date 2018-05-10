@@ -18,7 +18,7 @@ run:
   args:
   - -exc
   - |
-    cd pal-tracker
+    cd pal-tracker-distributed
     curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&source=github" | tar -zx
     chmod +x cf
     curl -L "https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/5.0.5/flyway-commandline-5.0.5-linux-x64.tar.gz" | tar -zx
