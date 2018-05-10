@@ -92,7 +92,7 @@ jobs:
   - get: allocations-artifacts
     trigger: false
   - task: migrate allocations database
-    file: pal-tracker-distributed/ci/migrateDatabase.yml
+    file: pal-tracker/ci/migrateDatabase.yml
     params:
       CF_API_URL: {{cf-api-url}}
       CF_USERNAME: {{cf-username}}
@@ -118,7 +118,7 @@ jobs:
   - get: backlog-artifacts
     trigger: false
   - task: migrate backlog database
-    file: pal-tracker-distributed/ci/migrateDatabase.yml
+    file: pal-tracker/ci/migrateDatabase.yml
     params:
       CF_API_URL: {{cf-api-url}}
       CF_USERNAME: {{cf-username}}
@@ -144,7 +144,7 @@ jobs:
   - get: registration-artifacts
     trigger: false
   - task: migrate registration database
-    file: pal-tracker-distributed/ci/migrateDatabase.yml
+    file: pal-tracker/ci/migrateDatabase.yml
     params:
       CF_API_URL: {{cf-api-url}}
       CF_USERNAME: {{cf-username}}
@@ -170,7 +170,7 @@ jobs:
   - get: timesheets-artifacts
     trigger: false
   - task: migrate timesheets database
-    file: pal-tracker-distributed/ci/migrateDatabase.yml
+    file: pal-tracker/ci/migrateDatabase.yml
     params:
       CF_API_URL: {{cf-api-url}}
       CF_USERNAME: {{cf-username}}
