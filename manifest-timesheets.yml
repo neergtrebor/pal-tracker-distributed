@@ -6,4 +6,4 @@ applications:
   instances: 1
   services:
   - tracker-timesheets-database
-  - my-eureka-service
+  - tracker-circuit-breaker-dashboard
